@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @include('includes.message-block')
     @if(count($errors)>0)
     <div class="row">
         <div class="alert alert-danger">

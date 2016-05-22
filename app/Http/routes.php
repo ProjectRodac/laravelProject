@@ -34,4 +34,10 @@ Route::get('/logout', [
 	'as' => 'logout'
 ]);
 
+Route::post('/createpost', [
+	'uses' => 'PostController@postCreatePost',
+	'as' => 'post.create',
+	'middleware' => 'auth'
+]);
+
 ?>

@@ -1,14 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
+    @include('includes.message-block')
     <section class="row new-post">
         <div class="col-md-10 col-md-offset-1">
             <header><h3>Ažuriraj status</h3></header>
-            <form action="">
+            <form action="{{ route('post.create') }}" method="post">
                 <div class="form-group">
-                    <textarea class="form-control" name="new-post" id="new-post" rows="5" placeholder="Što vam je na umu?"></textarea>
+                    <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Što vam je na umu?"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Objavi</button>
+                <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
         </div>
     </section>
