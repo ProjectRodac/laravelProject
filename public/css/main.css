@@ -1,0 +1,30 @@
+.new-post{
+    padding: 25px 0;
+    border-top: 2px solid #337ab7;
+    border-bottom: 2px solid #337ab7;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 100px;
+}
+
+.new-post header,
+.posts header{
+    margin-bottom: 20px;
+}
+
+.posts .post{
+    padding-left: 10px;
+    border-left: 3px solid #337ab7;
+    margin-bottom: 30px;
+}
+
+.posts .post .info{
+    color: #aaaaaa;
+    font-style: italic;
+    padding: 10px;
+}
+
+.interaction a{
+    margin: 5px;
+}
