@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::post('/signup',[
 	'uses'=> 'UserController@postSignUp',
@@ -25,6 +25,13 @@ Route::post('/signin',[
 
 Route::get('/dashboard',[
 	'uses'=> 'UserController@getDashboard',
-	'as'=> 'dashboard']);
+	'as'=> 'dashboard',
+	'middleware' => 'auth'
+]);
+
+Route::get('/logout', [
+	'uses' => 'UserController@getLogout',
+	'as' => 'logout'
+]);
 
 ?>
