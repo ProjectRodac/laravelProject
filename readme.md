@@ -32,3 +32,12 @@ Naslovna
 Naslovna Mobilna verzija
 ====
 ![alt tag](https://github.com/ProjectRodac/laravelProject/blob/master/homeMobile.PNG)
+Sign Up / Sign In
+====
+![alt tag](https://github.com/ProjectRodac/laravelProject/blob/master/login.PNG)
+Sign Up / Sign In Upozorenje
+====
+![alt tag](https://github.com/ProjectRodac/laravelProject/blob/master/login1.PNG)
+Sign Up / Sign In Mobilna verzija
+====
+![alt tag](https://github.com/ProjectRodac/laravelProject/blob/master/loginMobile.PNG)
