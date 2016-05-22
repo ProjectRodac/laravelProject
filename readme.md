@@ -29,7 +29,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Naslovna
 ====
-![alt tag](https://github.com/ProjectRodac/laraelProject/blob/master/home.PNG)
+![alt tag](https://github.com/ProjectRodac/laravelProject/blob/master/home.PNG)
 Naslovna Mobilna verzija
 ====
 ![alt tag](https://github.com/ProjectRodac/laravelProject/blob/master/homeMobile.PNG)
