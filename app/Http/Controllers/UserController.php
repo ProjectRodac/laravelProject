@@ -9,10 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-	public function getDashboard()
-	{
-		return view('dashboard');
-	}
+
 	public function postSignUp(Request $request)
 	{
 		$this->validate($request, [
@@ -31,7 +28,7 @@ class UserController extends Controller
 		$user->password = $password;
 
 		$user->save();
-
+		
 		Auth::login($user);
 
 		return redirect()->route('dashboard');

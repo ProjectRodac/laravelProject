@@ -24,7 +24,7 @@ Route::post('/signin',[
 	'as'=> 'signin']);
 
 Route::get('/dashboard',[
-	'uses'=> 'UserController@getDashboard',
+	'uses'=> 'PostController@getDashboard',
 	'as'=> 'dashboard',
 	'middleware' => 'auth'
 ]);
@@ -40,4 +40,18 @@ Route::post('/createpost', [
 	'middleware' => 'auth'
 ]);
 
-?>
+Route::get('/delete-post/{post_id}',[
+	'uses' => 'PostController@getDeletePost',
+	'as' => 'post.delete',
+	'middleware' => 'auth'
+]);
+
+Route::post('/edit', function (\Illuminate\Http\Request $request){
+	return response()->json(['message' => $request['postId']]);
+	/*
+	 * {
+	 * 	message: '$request['body']'
+	 * }
+	 */
+})->name('edit');
+
