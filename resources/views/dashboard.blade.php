@@ -16,7 +16,7 @@
     </section>
     <section class="row posts">
         <div class="col-md-10 col-md-offset-1">
-            <header><h3>Livefed</h3></header>
+            <header><h2>Livefed</h2></header>
             @foreach($posts as $post)
                 <article class="post" data-postid="{{ $post->id }}">
                     <p>{{ $post->body }}</p>
@@ -24,11 +24,11 @@
                         Objavio {{ $post->user->first_name }}, {{ $post->created_at }}
                     </div>
                     <div class="interaction">
-                        <a class="glyphicon glyphicon-thumbs-up" href="#"></a>
-                        <a class="glyphicon glyphicon-thumbs-down" href="#"></a>
+                        <a class="glyphicon glyphicon-thumbs-up like" href="#">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? ' You like it' : ' Like' : ' Like'}}</a>
+                        <a class="glyphicon glyphicon-thumbs-down like" href="#">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? ' You don\'t like it' : ' Dislike' : ' Dislike'}}</a>
                         @if(Auth::user() == $post->user)
                         <a class="glyphicon glyphicon-pencil" href="#"></a>
-                        <a class="glyphicon glyphicon-remove" href="{{ route('post.delete', ['post_id'=> $post->id]) }}"></a>
+                        <a class="glyphicon glyphicon-remove" href="{{ route('post.delete',['post_id'=>$post->id]) }}"></a>
                         @endif
                     </div>
                 </article>
@@ -45,14 +45,14 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="post-body">Uredi status</label>
+                            <label for="post-body">Status</label>
                             <textarea name="post-body" id="post-body" rows="5" class="form-control"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zatvori</button>
+                    <button type="button" class="btn btn-primary" id="modal-save">Spremi promjene</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -61,5 +61,6 @@
     <script>
         var token = '{{ Session::token() }}';
         var urlEdit = '{{ route('edit') }}';
+        var urlLike = '{{ route('like') }}';
     </script>
 @endsection

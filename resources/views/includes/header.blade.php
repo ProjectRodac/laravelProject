@@ -15,6 +15,7 @@
             <div class="collapse navbar-collapse" id="mainNavBar">
                 @if (!Auth::Guest())
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ route('account') }}">Account</a></li>
                     <li><a href="{{ route('logout') }}">Logout</a></li>
                 </ul>
                 @endif
