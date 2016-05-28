@@ -53,6 +53,10 @@ $('.collapse.navbar-collapse').find('.navbar-link.login').on('click' , function 
     $('#login-modal').modal();
 });
 
+$('.jumbotron').find('.signup').on('click' , function (event) {
+    event.preventDefault();
+    $('#signup-modal').modal();
+});
 
 
 jQuery(document).ready(function() {
@@ -88,5 +92,6 @@ jQuery(document).ready(function() {
 
 });
 
+$('.back-to-top').css({"display": "none"});
 
 

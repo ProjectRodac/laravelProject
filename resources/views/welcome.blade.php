@@ -10,7 +10,7 @@
     <div class="jumbotron">
         <h1>Hello, world!</h1>
         <p>Dobrodošli na Rodac's Social Network! Ako još niste registrirani ovo je pravi trenutak za to!</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Register Now</a></p>
+        <p><a class="btn btn-primary btn-lg signup" href="#" role="button">Register Now</a></p>
     </div>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="signup-modal">
@@ -73,5 +73,3 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 @endsection
-
-@section()

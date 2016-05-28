@@ -1,11 +1,8 @@
 .new-post{
-    padding: 25px 0;
-    border-top: 2px solid #337ab7;
-    border-bottom: 2px solid #337ab7;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 100px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+
 }
 
 .new-post header,
@@ -26,6 +23,11 @@
     margin-bottom: 30px;
 }
 
+.posts {
+    border-top: 2px solid #337ab7;
+
+}
+
 .posts .post .info{
     color: #aaaaaa;
     font-style: italic;
@@ -44,6 +46,7 @@
     word-spacing: -10px;
 }
 
+
 .back-to-top {
     background: none;
     margin: 0;
@@ -56,10 +59,23 @@
     display: none;
     text-decoration: none;
     color: #66afe9;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
     margin-right: 5px;
 }
 
 .back-to-top i {
     font-size: 60px;
+}
+
+.scrolling {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    box-shadow: 2px 0px 2px rgba(0,0,0,0.5);
+    border-bottom: 2px solid #0f0f0f ;
+}
+
+.jumbotron {
+    margin-top: 100px;
 }
